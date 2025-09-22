@@ -9,7 +9,7 @@ from vlmeval.vlm.smolvlm import SmolVLM
 
 """
 Make sure to use the venv from the validation/kornia_vlm_pyo3 directory.
-source ../kornia-rs/examples/smol_vlm/validation/kornia_vlm_pyo3/.env/bin/activate
+source ./vlmeval/vlm_custom/kornia_vlm_pyo3/.env/bin/activate
 python run.py --data MMStar --model SmolVLM-Kornia --reuse
 python run.py --data MMStar --model SmolVLM-Py-Comparison --reuse
 python run.py --data MMStar --model SmolVLM
