@@ -3,6 +3,9 @@ from vlmeval.api import *
 from functools import partial
 import os
 
+from vlmeval.vlm_custom.smolvlm_rs import SmolVLMKornia
+from vlmeval.vlm_custom.smolvlm_py import SmolVLMPyComparison
+
 PandaGPT_ROOT = None
 MiniGPT4_ROOT = None
 TransCore_ROOT = None
@@ -989,6 +992,9 @@ smolvlm_series = {
         SmolVLM2, model_path="HuggingFaceTB/SmolVLM2-500M-Video-Instruct"
     ),
     "SmolVLM2": partial(SmolVLM2, model_path="HuggingFaceTB/SmolVLM2-2.2B-Instruct"),
+
+    "SmolVLM-Kornia": partial(SmolVLMKornia),
+    "SmolVLM-Py-Comparison": partial(SmolVLMPyComparison),
 }
 
 instructblip_series = {
