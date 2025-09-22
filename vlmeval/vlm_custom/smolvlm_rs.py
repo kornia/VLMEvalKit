@@ -7,35 +7,6 @@ from PIL import Image
 from vlmeval.vlm.smolvlm import SmolVLM
 
 
-"""
-Make sure to use the venv from the validation/kornia_vlm_pyo3 directory.
-source ./vlmeval/vlm_custom/kornia_vlm_pyo3/.env/bin/activate
-python run.py --data MMStar --model SmolVLM-Kornia --reuse
-python run.py --data MMStar --model SmolVLM-Py-Comparison --reuse
-python run.py --data MMStar --model SmolVLM
-
-For re-compiling the pyo3 module:
-cd examples/smol_vlm/validation/kornia_vlm_pyo3
-source .env/bin/activate
-conda deactivate
-maturin develop --release
-
-
---------------------  -------------------
-split                 none
-Overall               0.20588235294117646
-calligraphy_painting  0.19298245614035087
-cultural_relic        0.23711340206185566
-food_clothes          0.11304347826086956
-historical_figure     0.02857142857142857
-scenery_building      0.21052631578947367
-sketch_reasoning      0.5333333333333333
-traditional_show      0.19696969696969696
---------------------  -------------------
-
-
-CCBench
-"""
 import kornia_vlm_pyo3
 
 
