@@ -7,7 +7,7 @@ from PIL import Image
 from vlmeval.vlm.smolvlm import SmolVLM
 
 
-import kornia_vlm_pyo3
+import kornia_vlm
 
 
 
@@ -35,7 +35,7 @@ class SmolVLMKornia(SmolVLM):
         )
         # torch.cuda.empty_cache()
 
-        self.model_rs = kornia_vlm_pyo3.SmolVLMInterface()
+        self.model_rs = kornia_vlm.SmolVLMInterface()
 
 
     def generate_inner(self, message, dataset=None):
@@ -381,7 +381,7 @@ if __name__ == "__main__":
     # ]
     # print(model.chat_inner(message_chat))
 
-    # response = kornia_vlm_pyo3.generate_raw(
+    # response = kornia_vlm.generate_raw(
     #     "<|im_start|>User:<image><image>Can you describe the first image? (it's not a hamburger) What about the second image? <end_of_utterance>\nAssistant:",
     #     400,
     #     [

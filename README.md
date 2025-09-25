@@ -2,29 +2,30 @@
 
 This is a fork of the original VLMEvalKit: [repo link](https://github.com/open-compass/VLMEvalKit).
 
+Custom interop & eval code are in `./vlmeval/vlm_custom`.
 
 ## Guides
 
-Building the environment
+Building & restarting the environment. Make sure to check your path to kornia is correct in `vlmeval/vlm_custom/kornia_vlm_pyo3/Cargo.toml`.
 ```sh
-cd vlmeval/vlm_custom/kornia_vlm_pyo3
-# create your conda/venv/uv environment here
+# create environment
+source .venv/bin/activate   # for example, I'm using venv
 
-# for venv
-source <name>/bin/activate
+# VLMEvalKit setup
+pip install -e .
 
-# make sure to deactivate any existing environment (in this, conda environments)
-conda deactivate
+# maturin setup
+pip install maturin
+
 
 # build your rust-python interop
-maturin develop --release
+maturin develop --release -m vlmeval/vlm_custom/kornia_vlm_pyo3/Cargo.toml
 ```
 
-Running the validation commands
+Running the validation commands.
 ```sh
 # Initialize the environment if haven't yet
-
-source ./vlmeval/vlm_custom/kornia_vlm_pyo3/.env/bin/activate
+source .venv/bin/activate   # for example, I'm using venv
 
 # for running the Kornia's version
 python run.py --data <dataset> --model SmolVLM-Kornia --reuse

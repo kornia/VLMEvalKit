@@ -5,6 +5,8 @@ import os
 
 from vlmeval.vlm_custom.smolvlm_rs import SmolVLMKornia
 from vlmeval.vlm_custom.smolvlm_py import SmolVLMPyComparison
+from vlmeval.vlm_custom.smolvlm2_rs import SmolVLM2Kornia
+from vlmeval.vlm_custom.smolvlm2_py import SmolVLM2PyComparison
 
 PandaGPT_ROOT = None
 MiniGPT4_ROOT = None
@@ -1105,6 +1107,8 @@ smolvlm_series = {
 
     "SmolVLM-Kornia": partial(SmolVLMKornia),
     "SmolVLM-Py-Comparison": partial(SmolVLMPyComparison),
+    "SmolVLM2-Kornia": partial(SmolVLM2Kornia),
+    "SmolVLM2-Py-Comparison": partial(SmolVLM2PyComparison),
 }
 
 instructblip_series = {
