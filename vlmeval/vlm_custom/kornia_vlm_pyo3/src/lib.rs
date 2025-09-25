@@ -5,7 +5,7 @@ mod smolvlm2;
 
 /// A Python module implemented in Rust.
 #[pymodule]
-fn kornia_smolvlm(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn kornia_vlm(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(smolvlm::generate, m)?)?;
     m.add_function(wrap_pyfunction!(smolvlm::generate_raw, m)?)?;
     m.add_class::<smolvlm::SmolVLMInterface>()?;

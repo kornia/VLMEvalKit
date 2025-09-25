@@ -1,11 +1,5 @@
-import torch
-# import os.path as osp
 import warnings
-# from .base import BaseModel
-# from ..smp import splitlen
-from PIL import Image
 from vlmeval.vlm.smolvlm import SmolVLM
-
 
 import kornia_vlm
 
