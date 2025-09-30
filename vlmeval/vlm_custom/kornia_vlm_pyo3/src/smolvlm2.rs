@@ -5,7 +5,7 @@ use pyo3::prelude::*;
 
 #[pyclass]
 pub struct SmolVLM2Interface {
-    model: SmolVlm2,
+    model: SmolVlm2<CpuAllocator>,
 }
 
 #[pymethods]
@@ -44,7 +44,7 @@ impl SmolVLM2Interface {
         // generate a caption of the image
         let caption = self
             .model
-            .inference_raw(&text_prompt, images, sample_length, CpuAllocator, false)
+            .inference_raw(&text_prompt, images, sample_length, CpuAllocator)
             .map_err(map_error)?;
 
         Ok(caption)

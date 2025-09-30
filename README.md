@@ -35,6 +35,10 @@ python run.py --data <dataset> --model SmolVLM-Py-Comparison --reuse
 
 # for running the Python's default features (rarely used)
 python run.py --data <dataset> --model SmolVLM --reuse
+
+
+python run.py --data <dataset> --model SmolVLM2-Kornia --reuse
+python run.py --data <dataset> --model SmolVLM2-Py-Comparison --reuse
 ```
 
 [Link](https://aicarrier.feishu.cn/wiki/Qp7wwSzQ9iK1Y6kNUJVcr6zTnPe?table=tblsdEpLieDoCxtb&view=vewa8sGZrY) to their supported dataset name.

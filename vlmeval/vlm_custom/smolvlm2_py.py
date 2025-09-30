@@ -28,7 +28,7 @@ class SmolVLM2PyComparison(BaseModel):
         self.processor = AutoProcessor.from_pretrained(model_path)
         self.model = AutoModelForImageTextToText.from_pretrained(
             model_path,
-            torch_dtype=torch.float32,
+            torch_dtype=torch.bfloat16,
             _attn_implementation="eager",
         ).to("cuda")
 
