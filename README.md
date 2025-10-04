@@ -37,7 +37,9 @@ python run.py --data <dataset> --model SmolVLM-Py-Comparison --reuse
 python run.py --data <dataset> --model SmolVLM --reuse
 
 
+# e.g., <dataset>=MMBench_Video_8frame_nopack
 python run.py --data <dataset> --model SmolVLM2-Kornia --reuse
+python run.py --data <dataset> --model SmolVLM2 --reuse
 python run.py --data <dataset> --model SmolVLM2-Py-Comparison --reuse
 ```
 

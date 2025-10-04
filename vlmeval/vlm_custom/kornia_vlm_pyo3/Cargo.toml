@@ -15,6 +15,7 @@ log = "0.4"
 # NOTE: make sure the paths are correct; this is assuming VLMEvalKit is placed at the same level as kornia-rs
 kornia-vlm = { path = "../../../../kornia-rs/crates/kornia-vlm", features = [
     "cuda",
+    "flash-attn",
 ] }
 kornia-io = { path = "../../../../kornia-rs/crates/kornia-io" }
 kornia-image = { path = "../../../../kornia-rs/crates/kornia-image" }
