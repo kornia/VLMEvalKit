@@ -29,7 +29,7 @@ class SmolVLM2PyComparison(BaseModel):
         self.model = AutoModelForImageTextToText.from_pretrained(
             model_path,
             torch_dtype=torch.bfloat16,
-            _attn_implementation="eager",
+            _attn_implementation="flash_attention_2",
         ).to("cuda")
 
         kwargs_default = {"max_new_tokens": 2048, "do_sample": False, "use_cache": True}
